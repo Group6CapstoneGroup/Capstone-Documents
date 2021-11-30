@@ -38,22 +38,22 @@ Within this directory you will find the following:
 
 Within this directory you will find the following:
 
--**Test Plan:** This document provides an overview of our test plan and where tests can be found within our services/UI.
+- **Test Plan:** This document provides an overview of our test plan and where tests can be found within our services/UI.
 
--**Test Cases:** This provides a detailed list of all tests we have and the expected input/output.
+- **Test Cases:** This provides a detailed list of all tests we have and the expected input/output.
 
--**Testing Instructions:** This folder contains both videos and documentation in regards to running the different tests of our application.
+- **Testing Instructions:** This folder contains both videos and documentation in regards to running the different tests of our application.
 
 ## Reflection
 
 Within this directory you will find the following:
 
--**Lists of Known Bugs:** This contains a list of known bugs/issues within our application.
+- **Lists of Known Bugs:** This contains a list of known bugs/issues within our application.
 
--**Reflecting/Experience:** This contains a document listing our thoughts and reflection on the project.
+- **Reflecting/Experience:** This contains a document listing our thoughts and reflection on the project.
 
 ## User Manual
 
 Within this directory you will find the following:
 
--**Instructions/Specifications:** This contains both a video and written documentation of how to use our application and what makes Tune Tip special and useful for users.
+- **Instructions/Specifications:** This contains both a video and written documentation of how to use our application and what makes Tune Tip special and useful for users.
