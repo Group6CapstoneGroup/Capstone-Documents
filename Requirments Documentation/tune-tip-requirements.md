@@ -1,4 +1,4 @@
-# Tune Tip Requirments
+# Tune Tip Requirements
 
 ## Common Acroynyms Used Through Documentation
 
@@ -17,7 +17,7 @@ The general description and idea of Tune Tip came about from solving a common pr
 
 With ML/AI advancing in the technical world we could provide our potential customers with customized recommendations and partner with some of the leading music streaming providers. The goal for Tune Tip is to be as automated as possible from end to end. Meaning we can automate extracting the data from the streaming platform to get the user's playlists. We are then able to make song recommendations based on what the user is looking for, again for the sake of this project we are utilizing song title and artist. Once the user is satisfied and has found songs to freshen up their playlist, we can then sync the data and add the new tracks to the user's streaming account with no manual entry on the user's part. For the sake of this product, we have already manually input a list of dummy music data to play with to show how the product works.
 
-## Specific Requirments
+## Specific Requirements
 
 ### UI
 
@@ -98,3 +98,9 @@ With ML/AI advancing in the technical world we could provide our potential custo
   - **1.6.4** The third method music repository implements is Delete(entries). This method deletes the selected song list that is passed in through the service layer. This method interacts directly with the database to remove all entries from the selected table. The method then returns true or false if entry was deleted successfully.
 
 ### Recommendation Service
+
+- **1.0.0:** Recommendation service will contain three specific files needed one is the Flask webapp, recommendation model and dataset.
+  - **1.0.1:** The first file is: data.csv file sourced from Kaggle. This is the data our recommendation model will consumer and “train” on.
+  - **1.0.2:** The second is main.py. This file contains the recommendation model.
+  - **1.0.3:** The third is recommendationService.py. This file is where we implement our Flask web app service that communicates with the UI.
+
