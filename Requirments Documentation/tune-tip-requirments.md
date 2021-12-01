@@ -43,14 +43,14 @@ With ML/AI advancing in the technical world we could provide our potential custo
   - **1.6.1:** If pressed the UI should display a loader screen to the user to indicate the syncing is happening and the user should not be able to access any other functionality until syncing is done.
   
 - **1.7.0:** The recommendation screen will display the music data the user has selected to feed to the recommendation model.
-  - **1.7.1:** The data will be displayed in a non selectable datagrid.
+  - **1.7.1:** The data will be displayed in a non-selectable data grid.
 
 - **1.8.0:** Below the data grid there will be 3 buttons.
   - **1.8.1:** The first button will be labeled add songs. If clicked the user redirected to the account page, this is where they can add more songs to feed to recommendation model.
   - **1.8.2:** The second is a button labeled delete list. If the clicked the music selection list will be cleared out. The user will then be redirected to the account page where they can select a new list of music to send to recommendation model.
   - **1.8.3:** The third is a button submit. If the clicked the UI will populate a spinner to indicate to the user the song data is being fed to the recommendation model. Once completed and we get recommendations back the loading indicator will stop and recommendations will be displayed.
 
-- **1.9.0:** The recommendations we recieved from the recommendation model will be displayed in a selectable datagrid.
+- **1.9.0:** The recommendations we received from the recommendation model will be displayed in a selectable data grid.
   - **1.9.1:** This data grid will include the columns: artist, track, playlist.
 
 - **2.0.0:** The user has the ability to select the specified rows they would like to add to their music playlist.
@@ -59,15 +59,20 @@ With ML/AI advancing in the technical world we could provide our potential custo
 
 ### Music Service
 
-- **1.0.0:** The music-service will have two seperate models it will work with the first being music model and the second being selected song model.
+- **1.0.0:** The music-service will have two separate models it will work with the first being music model and the second being selected song model.
   - **1.0.1:** Both these models have the same attributes: recordId, recordNumber, track, artist, playlist, album.
-  - **1.0.2:** music model will be the original data from the user that we save and keep as a refernce when extracting and importing data to streaming the user's streaming service. This information will be stored in it's own table in the database.
-  - **1.0.3:** selected song model will be the data the user interacts with our recommendation model with. This information will be stored in it's own table in the database.
-- **1.1.0:** Music service will contain a controller for music model. This controller is what the UI will ping when it make's request for information from music serivce (CORS).
+  - **1.0.2:** music model will be the original data from the user that we save and keep as a reference when extracting and importing data to streaming the user's streaming service. This information will be stored in it's own table in the database.
+  - **1.0.3:** selected song model will be the data the user interacts with our recommendation model with. This information will be stored in its own table in the database.
+- **1.1.0:** Music service will contain a controller for music model. This controller is what the UI will ping when it makes request for information from music service (CORS).
   - **1.1.1:** The controller will contain a number of requests for GET, POST and DELETE functionality.
   - **1.1.2:** The first method in music controller will be GetMusic(). This method will return a list of music it gets back from music service.
   - **1.1.3:** The second method in music controller will be GetTrack(). This method will return a single music item with the corresponding record number the user entered in.
   - **1.1.4:** The third method in music controller will be CreateMusicRecordAsync(). This method will create a new music model entry in the database with the fields: track, artist, album, and playlist specified by the user in the request.
-- **1.2.0:** Music service will contain a controller for selected song model. This controller is what the UI will ping when it make's request for information from music serivce.
+  - **1.1.5:** The fourth method in music controller will be DeleteTrack(). This method will delete the music object that corresponds to the record number entered in by the user.
+- **1.2.0:** Music service will contain a controller for selected song model. This controller is what the UI will ping when it makes request for information from music service.
+  - **1.2.1:** This controller will contain a number of requests for GET, POST and Delete functionality
+  - **1.2.2:** The first method in selected song controller will be GetSelectedSongs(). This method will make a call to the selected song service and return a list of the selected songs it currently has in the database.
+  - **1.2.3:** The second method in selected song controller will be CreateSelectedSongRecord(). This method will receive an input from the user of the selected song entry. These attributes include track, artist, album, and playlist. The method will then make a call to the selected song service and post this new entry into the database.
+  - **1.2.4:** The third method in the selected song controller will be DeleteSongSelection(). This method makes a call to the selected song service and deletes all current entries in the selected songs table within the database.
 
 ### Recommendation Service
