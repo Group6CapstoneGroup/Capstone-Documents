@@ -5,6 +5,7 @@
 - **UI:** User interface
 - **ML:** Machine learning
 - **AI:** Artifical intellegence
+- **CORS:** Cross Origin Resource Sharing
 
 ## Introduction
 
@@ -56,3 +57,17 @@ With ML/AI advancing in the technical world we could provide our potential custo
 - **2.1.0:** Under the data grid with the listed recommendations there will be a button labeled Add Songs.
   - **2.1.1:** If clicked the user will be redirected back to the account page where they will see their newly updated playlist.
 
+### Music Service
+
+- **1.0.0:** The music-service will have two seperate models it will work with the first being music model and the second being selected song model.
+  - **1.0.1:** Both these models have the same attributes: recordId, recordNumber, track, artist, playlist, album.
+  - **1.0.2:** music model will be the original data from the user that we save and keep as a refernce when extracting and importing data to streaming the user's streaming service. This information will be stored in it's own table in the database.
+  - **1.0.3:** selected song model will be the data the user interacts with our recommendation model with. This information will be stored in it's own table in the database.
+- **1.1.0:** Music service will contain a controller for music model. This controller is what the UI will ping when it make's request for information from music serivce (CORS).
+  - **1.1.1:** The controller will contain a number of requests for GET, POST and DELETE functionality.
+  - **1.1.2:** The first method in music controller will be GetMusic(). This method will return a list of music it gets back from music service.
+  - **1.1.3:** The second method in music controller will be GetTrack(). This method will return a single music item with the corresponding record number the user entered in.
+  - **1.1.4:** The third method in music controller will be CreateMusicRecordAsync(). This method will create a new music model entry in the database with the fields: track, artist, album, and playlist specified by the user in the request.
+- **1.2.0:** Music service will contain a controller for selected song model. This controller is what the UI will ping when it make's request for information from music serivce.
+
+### Recommendation Service
