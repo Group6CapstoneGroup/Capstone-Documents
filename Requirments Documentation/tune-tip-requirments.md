@@ -59,7 +59,7 @@ With ML/AI advancing in the technical world we could provide our potential custo
 
 ### Music Service
 
-- **1.0.0:** The music-service will have two separate models it will work with the first being music model and the second being selected song model.
+- **1.0.0:** Music-service will have two separate models it will work with the first being music model and the second being selected song model.
   - **1.0.1:** Both these models have the same attributes: recordId, recordNumber, track, artist, playlist, album.
   - **1.0.2:** music model will be the original data from the user that we save and keep as a reference when extracting and importing data to streaming the user's streaming service. This information will be stored in it's own table in the database.
   - **1.0.3:** selected song model will be the data the user interacts with our recommendation model with. This information will be stored in its own table in the database.
@@ -74,5 +74,11 @@ With ML/AI advancing in the technical world we could provide our potential custo
   - **1.2.2:** The first method in selected song controller will be GetSelectedSongs(). This method will make a call to the selected song service and return a list of the selected songs it currently has in the database.
   - **1.2.3:** The second method in selected song controller will be CreateSelectedSongRecord(). This method will receive an input from the user of the selected song entry. These attributes include track, artist, album, and playlist. The method will then make a call to the selected song service and post this new entry into the database.
   - **1.2.4:** The third method in the selected song controller will be DeleteSongSelection(). This method makes a call to the selected song service and deletes all current entries in the selected songs table within the database.
+- **1.3.0:** Music service will contain a service called song service.
+  - **1.3.1** Song service will inherit from an interface called IMusicService. This gives song service template it needs to satisfy for all it’s actions. IMusicService contains four functions: GetAsync(),GetAsync(recordNumber), CreateAsync(entry), DeleteAsync(recordNumber).
+  - **1.3.2** The first method song service implements is GetAsync(). This method makes a call to the music repository to fetch a list directly from the database of all current entries in the music table.
+  - **1.3.3** The second method song service implements is called GetAsync(recordNumber). This method makes a call to the music repository to fetch the music entry from the database with the corresponding record number entered by the user.
+  - **1.3.4** The third method song service implements is called CreateAsync(entry). This method makes a call to the music repository to create a new music entry within the music table of the database. The entry is the input the user has passed in with the following attributes: track, artist, album, playlist.
+  - **1.3.5** The fourth method song service implements is called DeleteAsync(recordNumber). This method makes a call to the music repository to delete the music record with the inputted record number from the user.
 
 ### Recommendation Service
