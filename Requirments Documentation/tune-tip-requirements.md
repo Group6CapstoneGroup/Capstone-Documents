@@ -103,4 +103,6 @@ With ML/AI advancing in the technical world we could provide our potential custo
   - **1.0.1:** The first file is: data.csv file sourced from Kaggle. This is the data our recommendation model will consumer and “train” on.
   - **1.0.2:** The second is main.py. This file contains the recommendation model.
   - **1.0.3:** The third is recommendationService.py. This file is where we implement our Flask web app service that communicates with the UI.
-
+- **1.1.0:** The recommendation model will first need to open and read all the lines of data from the csv file we are utilizing as a database for the model to make it's predictions on.
+  - **1.1.1:** We then need to clean the data so the model will be able to digest it and its easier to work with.
+  - **1.1.2:** The file will also contain a method called euclidean_matrix(data, numberOfRecommendations, song, artist). The purpose of this method is call the model and get recommendation outputs the model generates from the algorithm it utilizes. The inputs that are needed to be passed in are the data itself from the csv file, number of recommendations wanted, song title, and artist. The method then returns the printed text of the song recommendation(s) it has made.
