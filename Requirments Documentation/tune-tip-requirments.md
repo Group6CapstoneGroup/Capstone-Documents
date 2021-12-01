@@ -17,3 +17,23 @@ The general description and idea of Tune Tip came about from solving a common pr
 With ML/AI advancing in the technical world we could provide our potential customers with customized recommendations and partner with some of the leading music streaming providers. The goal for Tune Tip is to be as automated as possible from end to end. Meaning we can automate extracting the data from the streaming platform to get the user's playlists. We are then able to make song recommendations based on what the user is looking for, again for the sake of this project we are utilizing song title and artist. Once the user is satisfied and has found songs to freshen up their playlist, we can then sync the data and add the new tracks to the user's streaming account with no manual entry on the user's part. For the sake of this product, we have already manually input a list of dummy music data to play with to show how the product works.
 
 ## Specific Requirments
+
+### UI
+
+- **1.0.0:** Create a user friendly homepage that is easy to navigate and explains what the application is set to do.
+
+- **1.1.0:** Because we offer a platform that ideally integrates will multiple streaming services, provide a way to log into the program and selecting the streaming platform the user currently utilizes.
+
+- **1.2.0:** Provide a way to secure details until user is successfully logged into application. Data should not be visible to just anyone who logs into the application.
+  - **1.2.1** For this application and playing with dummy data we will set dummy login credentials that are needed to go utilize application features.
+
+- **1.3.0:** Once user has successfully been authenticated please navigate to the account page so the user can see their music data extracted.
+
+- **1.4.0:** Populate a selectable data grid with music information, this way the user can individually check each row item they would like to feed to the recommendation model.
+
+- **1.5.0:** On the account screen add a button to feed selected music to recommendation model.
+  - **1.5.1:** If pressed the UI should navigate to the recommendation page of the UI.
+
+- **1.6.0:** On the account screen add a sync button to sync music data to the user's streaming account.
+  - **1.6.1:** If pressed the UI should display a loader screen to the user to indicate the syncing is happening and the user should not be able to access any other functionality until syncing is done.
+  
