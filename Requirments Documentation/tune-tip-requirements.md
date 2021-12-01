@@ -99,10 +99,16 @@ With ML/AI advancing in the technical world we could provide our potential custo
 
 ### Recommendation Service
 
-- **1.0.0:** Recommendation service will contain three specific files needed one is the Flask webapp, recommendation model and dataset.
+- **1.0.0:** Recommendation service will contain three specific files needed which are the Flask web application, recommendation model and data set.
   - **1.0.1:** The first file is: data.csv file sourced from Kaggle. This is the data our recommendation model will consumer and “train” on.
   - **1.0.2:** The second is main.py. This file contains the recommendation model.
   - **1.0.3:** The third is recommendationService.py. This file is where we implement our Flask web app service that communicates with the UI.
 - **1.1.0:** The recommendation model will first need to open and read all the lines of data from the csv file we are utilizing as a database for the model to make it's predictions on.
   - **1.1.1:** We then need to clean the data so the model will be able to digest it and its easier to work with.
   - **1.1.2:** The file will also contain a method called euclidean_matrix(data, numberOfRecommendations, song, artist). The purpose of this method is call the model and get recommendation outputs the model generates from the algorithm it utilizes. The inputs that are needed to be passed in are the data itself from the csv file, number of recommendations wanted, song title, and artist. The method then returns the printed text of the song recommendation(s) it has made.
+- **1.2.0:** `The recommendationService.py` file needs to first specify that it wants to run as the Flask web application.
+  - **1.2.1:** Once we specified this file for our web application we need to support CORS by importing it into our application.
+  - **1.2.2:** We then need to create a API endpoint with the specified route: `/recommendations`. This endpoint will handle the POST request and interact with the model.
+  - **1.2.3:** We then will capture the body passed in the request to a variable which loads the json object.
+  - **1.2.4:** We then pass in the json properties needed to the euclidean_matrix method which are just the track and artist name.
+  - **1.2.5:** We then save the response from the method and return back the recommendation to the client.
