@@ -21,6 +21,10 @@ With ML/AI advancing in the technical world we could provide our potential custo
 ### UI
 
 - **1.0.0:** Create a user friendly homepage that is easy to navigate and explains what the application is set to do.
+  - **1.0.1:** The homepage will display a navigation bar with the app name toggled to the left and three clickable links toggled to the right.
+  - **1.0.2:** The first link will be labeled Home. If clicked the user will be redirected to the homepage of the application.
+  - **1.0.3:** The second link will be labeled About. If clicked the user will be redirected to the about section of the application. This form displays the about content of Tune Tip.
+  - **1.0.4:** The third link will be labeled Support. If clicked the user will be redirected to the support section of the application. This form displays user instructions and a support contact.
 
 - **1.1.0:** Because we offer a platform that ideally integrates will multiple streaming services, provide a way to log into the program and selecting the streaming platform the user currently utilizes.
 
@@ -37,3 +41,18 @@ With ML/AI advancing in the technical world we could provide our potential custo
 - **1.6.0:** On the account screen add a sync button to sync music data to the user's streaming account.
   - **1.6.1:** If pressed the UI should display a loader screen to the user to indicate the syncing is happening and the user should not be able to access any other functionality until syncing is done.
   
+- **1.7.0:** The recommendation screen will display the music data the user has selected to feed to the recommendation model.
+  - **1.7.1:** The data will be displayed in a non selectable datagrid.
+
+- **1.8.0:** Below the data grid there will be 3 buttons.
+  - **1.8.1:** The first button will be labeled add songs. If clicked the user redirected to the account page, this is where they can add more songs to feed to recommendation model.
+  - **1.8.2:** The second is a button labeled delete list. If the clicked the music selection list will be cleared out. The user will then be redirected to the account page where they can select a new list of music to send to recommendation model.
+  - **1.8.3:** The third is a button submit. If the clicked the UI will populate a spinner to indicate to the user the song data is being fed to the recommendation model. Once completed and we get recommendations back the loading indicator will stop and recommendations will be displayed.
+
+- **1.9.0:** The recommendations we recieved from the recommendation model will be displayed in a selectable datagrid.
+  - **1.9.1:** This data grid will include the columns: artist, track, playlist.
+
+- **2.0.0:** The user has the ability to select the specified rows they would like to add to their music playlist.
+- **2.1.0:** Under the data grid with the listed recommendations there will be a button labeled Add Songs.
+  - **2.1.1:** If clicked the user will be redirected back to the account page where they will see their newly updated playlist.
+
