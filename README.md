@@ -54,6 +54,4 @@ Within this directory you will find the following:
 
 ## User Manual
 
-Within this directory you will find the following:
-
-- **Instructions/Specifications:** This contains both a video and written documentation of how to use our application and what makes Tune Tip special and useful for users.
+The user Manual itself is embedded in the UI under the suport section of Tune Tip. You can also get a detailed demo of the product [here](https://www.youtube.com/watch?v=LAy3bJiqh2k).
