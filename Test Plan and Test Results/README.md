@@ -8,4 +8,4 @@ For a detailed walkthrough on setting up and running the unit tests for each ser
 
 [music-service]( https://www.youtube.com/watch?v=ASnsFLm2Q2k)
 
-[recommendation-service]
+[recommendation-service](https://youtu.be/u-9IeHCHqwY)
