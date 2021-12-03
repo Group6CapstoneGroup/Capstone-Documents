@@ -16,7 +16,7 @@ We will assign tasks/stories of new functionality and features we want to add by
 
 Each developer can work in parallel to complete stories by creating a new working branch off the main branch. This can be done by cloning the following command: 
 
-`git checkout -b branchname`.
+`git checkout -b branchname`
 
 ### Pull Requests
 
