@@ -31,3 +31,5 @@ To run the GitHub actions and check if they pass click on the following link. Th
 [music-service]( https://github.com/Group6CapstoneGroup/music-service/actions/workflows/dotnet-package.yml)
 
 [recommendation-service](https://github.com/Group6CapstoneGroup/recommendation-service/actions/workflows/main_mikaylapythoncicd.yml)
+
+[music-ui](https://github.com/Group6CapstoneGroup/music-ui/actions/workflows/main_mikaylablazorcicd.yml)
