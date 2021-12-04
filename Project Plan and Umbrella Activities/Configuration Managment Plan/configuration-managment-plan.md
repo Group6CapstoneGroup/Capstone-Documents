@@ -26,6 +26,8 @@ Once the developer has finished their task item and would like to check in their
 
 The repositories are currently utilizing GitHub Actions which is a continuous integration and continuous delivery platform that allows you to automate your build, test, and deployment pipeline. You can see examples of these here for the music-service and music -ui repositories:
 
+To run the GitHub actions and check if they pass click on the following link. The GitHub workflows directory should open and you will see a table with the existing workflows. In the top section of the table there should be a drop down that's labeled Run workflow. Click on that and make sure the main branch is selected and hit the green Run workflow button. This will automatically build, run and deploy the application.
+
 [music-service]( https://github.com/Group6CapstoneGroup/music-service/actions/workflows/dotnet-package.yml)
 
-[music-ui]( https://github.com/Group6CapstoneGroup/music-ui/actions)
+[recommendation-service](https://github.com/Group6CapstoneGroup/recommendation-service/actions/workflows/main_mikaylapythoncicd.yml)
